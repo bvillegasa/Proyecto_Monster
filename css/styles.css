@@ -1,0 +1,22 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:'Montserrat',sans-serif;color:#fff}
+.screen{height:100vh;display:flex;align-items:center;justify-content:center;background-size:cover;background-position:center;position:relative}
+.hidden{display:none}
+#hero{background-image:url('../recursos/img/imageshero-bg.jpg')}
+#gallery{background-image:url('../recursos/img/imagesgallery-bg.jpg')}
+.overlay{width:100%;height:100%;background:rgba(0,0,0,0.35);display:flex;align-items:center;justify-content:center}
+.hero-content{max-width:900px;display:flex;align-items:center;gap:40px;padding:40px}
+.hero-content h1{font-family:'Pacifico',cursive;font-size:48px;line-height:1.1;color:#ffecf9;text-shadow:0 2px 6px rgba(0,0,0,0.6)}
+.hero-content .for{display:block;font-size:20px;font-weight:300;color:#ffd6e9}
+.btn{background:#ff2d95;border:none;padding:12px 24px;border-radius:8px;color:white;font-weight:600;cursor:pointer;box-shadow:0 4px 12px rgba(255,45,149,0.25)}
+.btn:hover{transform:translateY(-2px)}
+.gallery-grid{width:90%;max-width:600px;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);gap:18px;align-items:center}
+.poster img{width:160px;height:240px;object-fit:cover;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,0.6);transition:transform .18s ease,box-shadow .18s ease}
+.poster img:hover{transform:scale(1.03);box-shadow:0 12px 28px rgba(0,0,0,0.7)}
+.poster{display:block}
+@media(max-width:800px){
+  .hero-content{flex-direction:column;text-align:center}
+  .hero-content h1{font-size:36px}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(3,1fr)}
+}
